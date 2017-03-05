@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.xrubio.alfred.nodejs</string>
+	<key>category</key>
+	<string>Development</string>
+	<key>connections</key>
+	<dict>
+		<key>4ECDB0BD-6265-4F41-98D5-78F4720ACBC7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F6547E7A-32EF-4C2A-8060-1F214136EC01</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6829F367-4CE6-4A0B-BB39-FF8DD64DC037</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0A4C08B0-6705-46A2-82ED-E0CB2D4886BE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6A088E2C-0E50-4646-8F46-36DE575C2384</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6829F367-4CE6-4A0B-BB39-FF8DD64DC037</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>83F605B6-C3D1-48EC-8A9E-DBBB21BA396E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>BCFFACFC-CEE4-488D-9AFA-AE2B2C73E010</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B11B132B-4A61-4C05-8F4F-2111F454E6C6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F366696C-72E0-4ABD-9C31-A357E1CD8CC7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>BCFFACFC-CEE4-488D-9AFA-AE2B2C73E010</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0A4C08B0-6705-46A2-82ED-E0CB2D4886BE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F366696C-72E0-4ABD-9C31-A357E1CD8CC7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0A4C08B0-6705-46A2-82ED-E0CB2D4886BE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F6547E7A-32EF-4C2A-8060-1F214136EC01</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6A088E2C-0E50-4646-8F46-36DE575C2384</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Xavier Rubio Jansana</string>
+	<key>description</key>
+	<string>Node.js/NPM/NVM tools for developers</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Node.js Tools</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>node ls</string>
+				<key>subtext</key>
+				<string>List packages for current default node.js installation</string>
+				<key>text</key>
+				<string>List NPM top-level packages</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>B11B132B-4A61-4C05-8F4F-2111F454E6C6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string># http://ilee.co.uk/list-node-packages-wo-dependencies/
+# npm ls --depth=0 "$@" 2&gt;/dev/null
+bash -l -c "npm -g ls --depth=0"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F366696C-72E0-4ABD-9C31-A357E1CD8CC7</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>ls ~/.nvm/versions/node/*/lib/node_modules</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>BCFFACFC-CEE4-488D-9AFA-AE2B2C73E010</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>largetypetext</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.largetype</string>
+			<key>uid</key>
+			<string>0A4C08B0-6705-46A2-82ED-E0CB2D4886BE</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>node nvm ls</string>
+				<key>subtext</key>
+				<string>List packages for all node.js installations managed by NVM</string>
+				<key>text</key>
+				<string>List all NVM installations top-level packages</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>83F605B6-C3D1-48EC-8A9E-DBBB21BA396E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Fetching installed versions...</string>
+				<key>script</key>
+				<string>query=`echo $1 | sed 's/node nvm install //g'`
+
+cat &lt;&lt; EOB
+{
+	"variables": {
+		"newversion": "$query"
+	},
+	"items": [
+		{
+			"title": "none",
+			"subtitle": "Do not migrate previous packages",
+			"arg": "-",
+			"autocomplete": "none"
+		},
+EOB
+bash -l -c "nvm ls --no-colors" | grep -v -- \ -\&gt; | grep -v system | cut -d v -f 2 | cut -d " " -f 1 | while read i; do
+	cat &lt;&lt; EOB
+		{
+			"title": "$i",
+			"subtitle": "Migrate from $i",
+			"arg": "$i",
+			"autocomplete": "$i"
+		},
+EOB
+done
+echo "	]}"
+</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>F6547E7A-32EF-4C2A-8060-1F214136EC01</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>node nvm install</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Fetching available versions...</string>
+				<key>script</key>
+				<string>echo "{\"items\":" [
+curl https://nodejs.org/dist/ 2&gt;/dev/null | grep "a href" | cut -d \" -f 2 | grep -v \\.\\./ | grep /\$ | cut -d / -f 1 | sort -r | while read i; do
+	cat &lt;&lt; EOB
+	{
+		"title": "$i",
+		"subtitle": "New version to install: $i",
+		"arg": "node nvm install $i ",
+		"autocomplete": "$i"
+	},
+EOB
+done
+echo "]}"
+</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>You could select an old version to reinstall packages to new version</string>
+				<key>title</key>
+				<string>Install a new node.js using NVM</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>4ECDB0BD-6265-4F41-98D5-78F4720ACBC7</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>IFS=' ' read -r -a arguments &lt;&lt;&lt; "$1"
+new=${arguments[0]}
+old=${arguments[1]}
+
+if [ "$old" == "-" ]; then
+	bash -l -c "nvm install $new"
+	#bash -l -c "echo nvm install $new"
+else
+	bash -l -c "nvm install $new --reinstall-packages-from=$old"
+	#bash -l -c "echo nvm install $new --reinstall-packages-from=$old"
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>6829F367-4CE6-4A0B-BB39-FF8DD64DC037</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:newversion} {query}</string>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>6A088E2C-0E50-4646-8F46-36DE575C2384</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>0A4C08B0-6705-46A2-82ED-E0CB2D4886BE</key>
+		<dict>
+			<key>xpos</key>
+			<integer>650</integer>
+			<key>ypos</key>
+			<integer>180</integer>
+		</dict>
+		<key>4ECDB0BD-6265-4F41-98D5-78F4720ACBC7</key>
+		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>310</integer>
+		</dict>
+		<key>6829F367-4CE6-4A0B-BB39-FF8DD64DC037</key>
+		<dict>
+			<key>xpos</key>
+			<integer>460</integer>
+			<key>ypos</key>
+			<integer>310</integer>
+		</dict>
+		<key>6A088E2C-0E50-4646-8F46-36DE575C2384</key>
+		<dict>
+			<key>xpos</key>
+			<integer>390</integer>
+			<key>ypos</key>
+			<integer>340</integer>
+		</dict>
+		<key>83F605B6-C3D1-48EC-8A9E-DBBB21BA396E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>180</integer>
+		</dict>
+		<key>B11B132B-4A61-4C05-8F4F-2111F454E6C6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+		<key>BCFFACFC-CEE4-488D-9AFA-AE2B2C73E010</key>
+		<dict>
+			<key>xpos</key>
+			<integer>220</integer>
+			<key>ypos</key>
+			<integer>180</integer>
+		</dict>
+		<key>F366696C-72E0-4ABD-9C31-A357E1CD8CC7</key>
+		<dict>
+			<key>xpos</key>
+			<integer>220</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+		<key>F6547E7A-32EF-4C2A-8060-1F214136EC01</key>
+		<dict>
+			<key>xpos</key>
+			<integer>220</integer>
+			<key>ypos</key>
+			<integer>310</integer>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>https://github.com/xrubioj/alfred-nodejs-tools</string>
+</dict>
+</plist>
